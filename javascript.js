@@ -3,6 +3,7 @@ const isTrangleBtn = document.querySelector("#isTrangle-btn");
 const outputAngle = document.querySelector("#outPut");
 function calculateSumAngle(angle1,angle2,angle3){
     const angleOfAngle = angle1+angle2+angle3
+    return angleOfAngle;
     //console.log(angleOfAngle)
 }
 function isTrangle(){
