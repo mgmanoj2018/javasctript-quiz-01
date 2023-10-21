@@ -17,4 +17,4 @@ function isTrangle(){
     //console.log(typeof input[0].value)
    // console.log(sunOfAngle)
 }
-isTrangleBtn.addEventListener("click", isTrangle)
+isTrangleBtn.addEventListener("click", isTrangle);
