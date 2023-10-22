@@ -1,30 +1,34 @@
 console.log("hello")
-const cashinput = document.querySelector("#Cash");
-const billinput = document.querySelector("#bill");
-const btn = document.querySelector("#submit-btn");
-const outputdiv = document.querySelector("#output");
 
-function calculateNoOfNotes(bill,cash){
-    if(bill>0){
-        if(cash >= bill){
-            const returnamount = cash-bill
-            console.log("return amount" + " " + returnamount )
+const billAmount = document.querySelector("#bill");
+const cashinput = document.querySelector("#Cash");
+const btn = document.querySelector("#submit-btn");
+const errMassage = document.querySelector("#error-msg") 
+const numberOfNotes = document.querySelectorAll(".noOfNotes")
+const availableNotes = [2000,500,200,100,50,20,1]
+function validationOfAmount(){
+
+    if(billAmount.value>0){
+        if(billAmount.value <= cashinput.value){
+            const returnamount =cashinput.value - billAmount.value 
+            calculateCash(returnamount)
         }else{
-            console.log("cash should be greater then bill or equal")
+            errMassage.innerText = "Bill amount should be big amount";
         }
     }else{
-        console.log("bill should be greater then 0")
+        errMassage.innerText = "Bill amount should be positive amount";
     }
-    const calculation = cash-bill
-   // console.log(calculation)
+   
 }
- function calculateNoOfNoteReturn(){
+ 
+function calculateCash(returnamount){
+    for(let i=0; i<availableNotes.length;i++){
+        const noOfNotes = Math.trunc(returnamount/availableNotes[i]);
+        returnamount%=availableNotes[i];
+    numberOfNotes[i].innerText = noOfNotes
+    }
     
- }
-function calculateCash(){
-    const outputvalue = calculateNoOfNotes(billinput.value,cashinput.value)
-    //console.log("click");
 }
-btn.addEventListener("click", calculateCash);
+btn.addEventListener("click", validationOfAmount);
 
 
