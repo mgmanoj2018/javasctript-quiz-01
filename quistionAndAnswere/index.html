@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Quiz of Question and Answere</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container-body">
+            <div class="heading">
+                <h1>Question and Answere</h1>
+            </div>
+            <form id="formAll">
+                <div class="question-body">
+                    <p>Inside which HTML element do we put the JavaScript? </p>
+                    <label for="js"><input type="radio" name="input1" value="JS" class="input-box"><span class="checkmark">JS</span></label>
+                    <label><input type="radio" name="input1" value="Scripting" class="input-box"><span class="checkmark">Scripting</span></label>
+                    <label><input type="radio" name="input1" value="Script" class="input-box"><span class="checkmark">Script</span></label>
+                    <label><input type="radio" name="input1" value="Javascript" class="input-box"><span class="checkmark">Javascript</span></label>
+                </div>
+                <div class="question-body">
+                    <p>How do you write "Hello World" in an alert box?</p>
+                    <label><input type="radio" name="input2" value="alertBox('Hello World');" class="input-box"><span class="checkmark"> alertBox("Hello World");</span></label>
+                    <label><input type="radio" name="input2" value="alert('Hello World')" class="input-box"><span class="checkmark"> alert("Hello World");</span></label>
+                    <label><input type="radio" name="input2" value="msg('Hello World');" class="input-box"><span class="checkmark"> msg("Hello World");</span></label>
+                    <label><input type="radio" name="input2" value="msgBox('Hello World');" class="input-box"><span class="checkmark"> msgBox("Hello World");</span></label>
+                </div>
+             </form>
+             <button id="submit-btn">Submit Answere</button>
+                 <p id="outPut"></p>
+            </div>
+    </div>
+    <script src="javascript.js" type="text/javascript"></script>
+</body>
+</html>
