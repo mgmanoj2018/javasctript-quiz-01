@@ -23,10 +23,14 @@ function calculationNo(){
   
 
 }
+<<<<<<< HEAD
 // function calculateSum(stringDob){
 //     stringDob = stringDob.replaceAll("-","");
 //     console.log(stringDob);
 // }
+=======
+
+>>>>>>> workingfile
 function isLuckyNo(){
     calculationNo()
 }
